@@ -1,5 +1,7 @@
 
-# create de matrix with cache options
+# create de matrix with cache options, so if its been already calculated
+# is no necesary to calculate again.
+# the function assumes an invertible matrix
 
 makeCacheMatrix <- function(x = matrix()) {
         
@@ -19,9 +21,9 @@ makeCacheMatrix <- function(x = matrix()) {
         }
 
 
-
-
 # Calculate inverse matrix with cache options
+# if the value its cached it does not calculate again.
+# if not, then the function uses a solve(matrix) function to get de inverse matrix
 
 cacheSolve <- function(x,...) {
         inv <- x$getinv()
